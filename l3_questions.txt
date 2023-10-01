@@ -1,0 +1,6 @@
+1. TODO GITHUB
+
+2. At localhost:8000, the browser shows a default page telling us that the installation was successful. It contains links Django release notes, documentation, a tutorial link, and a community link.
+3. The root directory / gives us a 404 Not Found response to a page listing the URL patterns that Django tried to match our path with.
+   /polls gives us the response that we defined in the function 'index' in polls/views.py
+4.
