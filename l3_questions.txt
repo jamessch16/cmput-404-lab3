@@ -1,6 +1,9 @@
-1. TODO GITHUB
-
+1. https://github.com/jamessch16/cmput-404-lab3
 2. At localhost:8000, the browser shows a default page telling us that the installation was successful. It contains links Django release notes, documentation, a tutorial link, and a community link.
 3. The root directory / gives us a 404 Not Found response to a page listing the URL patterns that Django tried to match our path with.
    /polls gives us the response that we defined in the function 'index' in polls/views.py
-4.
+4. Migrations are a system that Django uses to keep track of how the model changes and apply them to your database, similar to git. When you run the migrate command it takes the model that you've built and modifies your database to fit. This is useful because it lets keep temporary changes in your model separate from your live production and lets you keep multiple versions of your database.
+5. /admin directs to a login page. Once logged in, it leads to an administration page where admins can create and edit choices and questions in the database, as well as groups and users. The question and choice entry correspond with the models that we added to polls/admin.py. To get custom models to appear in the admin page, we simply have to add a line in our admin.py file "admin.site.register({model})" where model is the model we want to add.
+6. For /polls/38/ it says that I'm looking at question 38. /../results/ and /../vote/ give me similar results saying that I'm viewing the results and voting on the question respectively. Using a string gives a 404 response. To use arbitrary characters, we would have give each path object <str:question_id>/../ as its first parameter.
+7. It's a bad idea to hardcode urls because you might change them. If you do, then you would have to change every instance of that url in your codebase manually. It would be very hard to search for and missing even one could cause a major bug. 
+8. Django's generic views take care of common web functions, retrieving an object from the database in our example, and reduce the amount of code that you have to write. This is good both for the amount of code you have to write and for ease of readability. If we need a function that isn't covered by generic views or if we have to perform some variant on the normal code, we should not use generic views.
